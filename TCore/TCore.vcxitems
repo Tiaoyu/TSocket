@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{96644832-3a3c-4f87-8842-0305c316c37a}</ItemsProjectGuid>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)enum.pb.cc" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)error.pb.cc" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)game.pb.cc" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)SocketBase.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)UserMgr.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Utils.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)enum.pb.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)error.pb.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)game.pb.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)SocketBase.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)UserMgr.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Utils.h" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,1 @@
+protoc -I=. --cpp_out=../TCore game.proto error.proto enum.proto
